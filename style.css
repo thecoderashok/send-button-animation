@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
 }
 
 
@@ -11,31 +14,33 @@ section{
     position: relative;
     display: grid;
     place-items: center;
+    background: rgb(19, 19, 19);
 }
 
 button{
     position: relative;
     outline: none;
-    width: 12vw;
+    width: 11vw;
     height: 5vw;
-    background: rgb(39, 35, 38);
+    background: rgb(29, 29, 29);
     color: rgb(255, 255, 255);
     border: none;
-    border-radius: 1rem;
+    border-radius: 1.5vw;
     display: flex;
     flex-direction: row;
     overflow: hidden;
     align-items: center;
+    cursor: pointer;
 }
 
 .button_placeholder{
-    width: 70%;
+    min-width: 75%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2vw;
-    background: red;
+    
 }
 
 .button_placeholder .placeholeder_text_wrapper {
@@ -45,11 +50,10 @@ button{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* background: green; */
     overflow: hidden;
 }
 
-.button_placeholder .placeholeder_text_wrapper div {
+#button-placeholder-row {
     position: relative;
     width: 100%;
     max-height: 100%;
@@ -58,15 +62,63 @@ button{
     justify-content: center;
     align-items: center;
     transform: translateY(0%);
-    /* background: rgba(0, 0, 255, 0.295); */
     transition: .3s;
     overflow: visible;
 }
 
-.button_placeholder .placeholeder_text_wrapper div span {
-    padding: 4%;
+#button-placeholder-row span {
+    padding: 3%;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.button_placeholder .placeholeder_text_wrapper div:hover{
-    transform: translateY(-50%);
+
+.sent{
+    color: rgb(0, 200, 77);
+}
+
+
+.button_placeholder_icon{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    right: 12%;
+    overflow: hidden;
+
+}
+.placeholder_icons_row{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    min-width: 200%;
+    height: 100%;
+    justify-content: flex-end;
+    transform: translateX(-50%);
+    transition: .3s;
+}
+
+.placeholder_icons_row span {
+    font-size: 2vw;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    
+}
+
+.icon_sent i{
+  position: absolute;
+}
+
+.fa-check{
+    color: rgb(0, 200, 77);
+}
+#iconSent{
+    transition: .2s ease-in;
+    opacity: 1;
+}
+
+#iconSent-check{
+    opacity: 0;
+    transition: .6s !important;
 }

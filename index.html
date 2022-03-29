@@ -10,26 +10,30 @@
 </head>
 <body>
  <section>
-    <button id="button">
+    <button id="button" onclick="send()">
         <div class="button_placeholder">
             <div class="placeholeder_text_wrapper">
-                <div>
+                <div id="button-placeholder-row">
                     <span>Send</span>
-                    <span>Sent</span>
+                    <span class="sent">Sent</span>
                 </div>
             </div>
         </div>
-        <span class="button_placeholder_icon">
+
+        <div class="button_placeholder_icon">
+           <div class="placeholder_icons_row" id="button-icon-row">
+            <span class="icon_sent">
+                <i class="fa-solid fa-angle-right" id="iconSent"></i>
+                <i class="fa-solid fa-check" id="iconSent-check"></i>
+            </span>
             <span class="icon_send">
                 <i class="fa-solid fa-angle-right"></i>
             </span>
-            <span class="icon_sent">
-                <i class="fa-solid fa-check"></i>
-            </span>
-        </span>
+           </div>
+        </div>
+
     </button>
  </section>
 </body> 
-
   <script src="main.js"></script>
 </html>
